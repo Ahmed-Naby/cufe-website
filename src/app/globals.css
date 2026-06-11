@@ -1,0 +1,340 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Navy (Primary Brand: Dark Charcoal) ── */
+  --color-navy-50: #F8F9FA;
+  --color-navy-100: #E9ECEF;
+  --color-navy-200: #DEE2E6;
+  --color-navy-300: #CED4DA;
+  --color-navy-400: #ADB5BD;
+  --color-navy-500: #6C757D;
+  --color-navy-600: #495057;
+  --color-navy-700: #212529;
+  --color-navy-800: #1A1C1E;
+  --color-navy-900: #121416;
+  --color-navy-950: #0A0B0C;
+
+  /* ── Gold (Accent: Cool Grey / Silver) ── */
+  --color-gold-50: #F8F9FA;
+  --color-gold-100: #E2E8F0;
+  --color-gold-200: #CBD5E1;
+  --color-gold-300: #94A3B8;
+  --color-gold-400: #6C757D;
+  --color-gold-500: #495057;
+  --color-gold-600: #343A40;
+  --color-gold-700: #212529;
+  --color-gold-800: #1A1A1A;
+  --color-gold-900: #0F0F0F;
+
+  /* ── Footer Accent ── */
+  --color-footer-accent: #ADB5BD;
+
+  /* ── Semantic Colors ── */
+  --color-background: #F5F7FA;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #E9ECEF;
+  --color-text-primary: #212529;
+  --color-text-secondary: #495057;
+  --color-text-muted: #6C757D;
+  --color-text-inverse: #FFFFFF;
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
+  --color-success: #16A34A;
+  --color-warning: #EAB308;
+  --color-error: #DC2626;
+  --color-info: #2563EB;
+
+  /* ── Typography ── */
+  --font-sans: var(--font-outfit), system-ui, -apple-system, sans-serif;
+  --font-heading: var(--font-playfair-display), serif;
+
+  --text-display-xl: 4rem;
+  --text-display-xl--line-height: 1.1;
+  --text-display-xl--letter-spacing: -0.02em;
+
+  --text-display: 3rem;
+  --text-display--line-height: 1.15;
+  --text-display--letter-spacing: -0.02em;
+
+  --text-h1: 2.25rem;
+  --text-h1--line-height: 1.2;
+  --text-h1--letter-spacing: -0.01em;
+
+  --text-h2: 1.75rem;
+  --text-h2--line-height: 1.25;
+
+  --text-h3: 1.375rem;
+  --text-h3--line-height: 1.35;
+
+  --text-h4: 1.125rem;
+  --text-h4--line-height: 1.4;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.65;
+
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.6;
+
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.5;
+
+  /* ── Shadows ── */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.04);
+  --shadow-header: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-mega-menu: 0 20px 50px rgba(0, 0, 0, 0.12);
+
+  /* ── Border Radius ── */
+  --radius-card: 0.75rem;
+  --radius-button: 0.5rem;
+
+  /* ── Animations ── */
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-counter-up: counter-up 0.4s ease-out forwards;
+
+  /* ── Breakpoints ── */
+  --breakpoint-xs: 475px;
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes counter-up {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ── Base Styles ── */
+:root {
+  --header-height: 4.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-gold-400) 30%, transparent);
+  color: var(--color-navy-700);
+}
+
+/* ── Utility Classes ── */
+@utility container-main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  @media (min-width: 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@utility section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@utility section-padding-sm {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* ── Prose Overrides ── */
+.prose-cufe {
+  max-width: 720px;
+}
+
+.prose-cufe h1,
+.prose-cufe h2,
+.prose-cufe h3,
+.prose-cufe h4 {
+  font-family: var(--font-heading);
+  color: var(--color-navy-700);
+}
+
+.prose-cufe a {
+  color: var(--color-gold-500);
+  text-decoration: none;
+}
+
+.prose-cufe a:hover {
+  text-decoration: underline;
+}
+
+.prose-cufe strong {
+  color: var(--color-navy-700);
+}
+
+/* ── Custom Portal Card Slide Hover Animation ── */
+/* ── Hero "Engineering" accent text — per theme ── */
+.hero-accent-text { color: #ADB5BD; }
+[data-theme="stanford"] .hero-accent-text { color: #FEDD5C; }
+[data-theme="mit"] .hero-accent-text { color: #FFEB00; }
+[data-theme="classic"] .hero-accent-text { color: #F4A900; }
+
+/* ── Hero Overlay — per-theme tint ── */
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(15, 15, 15, 0.88), rgba(15, 15, 15, 0.70));
+}
+
+.portal-card-custom {
+  background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border: 1px solid var(--color-border-light);
+}
+
+.portal-card-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to bottom, var(--color-navy-700), var(--color-navy-600));
+  z-index: -1;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border-radius: inherit;
+}
+
+.portal-card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: transparent;
+}
+
+.portal-card-custom:hover::before {
+  height: 100%;
+}
+
+/* ══════════════════════════════════════════════
+   THEME OVERRIDES — palette switcher
+   ══════════════════════════════════════════════ */
+
+/* ── Stanford: Cardinal Red + Warm Grays ── */
+[data-theme="stanford"] {
+  --color-navy-50: #FAF7F5;
+  --color-navy-100: #F0EBE7;
+  --color-navy-200: #E0D8D1;
+  --color-navy-300: #C1B5AA;
+  --color-navy-400: #8D8078;
+  --color-navy-500: #6B2020;
+  --color-navy-600: #5A1818;
+  --color-navy-700: #8C1515;
+  --color-navy-800: #6E1010;
+  --color-navy-900: #4A0B0B;
+  --color-navy-950: #2A0606;
+
+  --color-gold-50: #FEF5F5;
+  --color-gold-100: #F5D5D5;
+  --color-gold-200: #E6A6A6;
+  --color-gold-300: #C46666;
+  --color-gold-400: #A82020;
+  --color-gold-500: #8C1515;
+  --color-gold-600: #751111;
+  --color-gold-700: #5E0E0E;
+  --color-gold-800: #470A0A;
+  --color-gold-900: #300707;
+
+  --color-background: #FAF7F5;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F0EBE7;
+  --color-text-primary: #2E2D29;
+  --color-text-secondary: #53565A;
+  --color-text-muted: #7F7776;
+  --color-border: #E0D8D1;
+  --color-border-light: #F0EBE7;
+  --color-footer-accent: #FEDD5C;
+}
+
+/* ── MIT: Crimson Red + Cool Grays ── */
+[data-theme="mit"] {
+  --color-navy-50: #F2F4F8;
+  --color-navy-100: #DDE1E6;
+  --color-navy-200: #C1C7CD;
+  --color-navy-300: #8B959E;
+  --color-navy-400: #626A73;
+  --color-navy-500: #4C1520;
+  --color-navy-600: #5E0010;
+  --color-navy-700: #750014;
+  --color-navy-800: #580010;
+  --color-navy-900: #3A000B;
+  --color-navy-950: #1E0006;
+
+  --color-gold-50: #FFF0F2;
+  --color-gold-100: #FECDD3;
+  --color-gold-200: #FD9AAB;
+  --color-gold-300: #E84464;
+  --color-gold-400: #A3001A;
+  --color-gold-500: #750014;
+  --color-gold-600: #5C0010;
+  --color-gold-700: #43000C;
+  --color-gold-800: #2A0008;
+  --color-gold-900: #150004;
+
+  --color-background: #F2F4F8;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #DDE1E6;
+  --color-text-primary: #212326;
+  --color-text-secondary: #40464C;
+  --color-text-muted: #626A73;
+  --color-border: #C1C7CD;
+  --color-border-light: #DDE1E6;
+  --color-footer-accent: #FFEB00;
+}
+
+/* ── Classic: Navy Blue + Gold ── */
+[data-theme="classic"] {
+  --color-navy-50: #EFF3F8;
+  --color-navy-100: #D6E0ED;
+  --color-navy-200: #AEBFD8;
+  --color-navy-300: #7A96BA;
+  --color-navy-400: #4D6D96;
+  --color-navy-500: #2A4A73;
+  --color-navy-600: #152E52;
+  --color-navy-700: #0D2240;
+  --color-navy-800: #081830;
+  --color-navy-900: #040E20;
+  --color-navy-950: #020610;
+
+  --color-gold-50: #FFF9EB;
+  --color-gold-100: #FEEFC3;
+  --color-gold-200: #FCDF8B;
+  --color-gold-300: #F4C44E;
+  --color-gold-400: #F4A900;
+  --color-gold-500: #C8860A;
+  --color-gold-600: #A36D08;
+  --color-gold-700: #7D5406;
+  --color-gold-800: #573B04;
+  --color-gold-900: #312103;
+
+  --color-background: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #EFF3F8;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #64748B;
+  --color-border: #D6E0ED;
+  --color-border-light: #EFF3F8;
+  --color-footer-accent: #F4A900;
+}
