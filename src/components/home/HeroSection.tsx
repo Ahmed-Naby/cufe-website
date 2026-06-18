@@ -75,16 +75,16 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-10 flex flex-col sm:flex-row gap-4"
             >
-              <Button href="/departments" size="lg" className="bg-gold-400 text-white hover:bg-white hover:text-navy-700">
+              <Button href="/departments" size="lg" className="hero-cta-primary bg-gold-400 hover:bg-white hover:text-navy-700!">
                 Explore Programs
               </Button>
               <Button
-                href="/contact"
+                href="/study"
                 variant="outline"
                 size="lg"
                 className="border-white/30 text-white hover:bg-white hover:text-navy-700"
               >
-                Get in Touch
+                Study at CUFE
               </Button>
             </motion.div>
           </div>

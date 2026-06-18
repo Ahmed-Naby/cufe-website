@@ -14,7 +14,7 @@ export function StatCounter({ value, label, suffix, prefix }: StatCounterProps) 
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-heading text-display font-bold text-gold-400">
+      <div className="font-heading text-display font-bold text-(--color-stat-number,var(--color-gold-400))">
         {prefix}
         {count.toLocaleString()}
         {suffix}

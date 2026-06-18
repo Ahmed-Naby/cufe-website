@@ -189,6 +189,9 @@ body {
 [data-theme="stanford"] .hero-accent-text { color: #FEDD5C; }
 [data-theme="mit"] .hero-accent-text { color: #FFEB00; }
 [data-theme="classic"] .hero-accent-text { color: #F4A900; }
+.hero-cta-primary, .nav-cta-primary { color: white; }
+[data-theme="classic"] .hero-cta-primary,
+[data-theme="classic"] .nav-cta-primary { color: #0D2240; }
 
 /* ── Hero Overlay — per-theme tint ── */
 .hero-overlay {
@@ -265,6 +268,7 @@ body {
   --color-border: #E0D8D1;
   --color-border-light: #F0EBE7;
   --color-footer-accent: #FEDD5C;
+  --color-stat-number: #FEDD5C;
 }
 
 /* ── MIT: Crimson Red + Cool Grays ── */
@@ -301,6 +305,7 @@ body {
   --color-border: #C1C7CD;
   --color-border-light: #DDE1E6;
   --color-footer-accent: #FFEB00;
+  --color-stat-number: #FFEB00;
 }
 
 /* ── Classic: Navy Blue + Gold ── */

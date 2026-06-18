@@ -116,7 +116,7 @@ export function Header() {
             <Button
               href="https://std.eng.cu.edu.eg"
               size="sm"
-              className="hidden lg:inline-flex whitespace-nowrap text-white!"
+              className="hidden lg:inline-flex whitespace-nowrap nav-cta-primary"
             >
               Student Portal
             </Button>
