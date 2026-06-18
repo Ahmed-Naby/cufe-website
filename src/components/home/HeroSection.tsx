@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 export function HeroSection() {
   return (
     <section 
-      className="relative min-h-[90vh] flex items-center bg-navy-700 overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
+      className="relative min-h-[90vh] flex items-start lg:items-center bg-navy-700 overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
       style={{ backgroundImage: "url('/images/hero/hero-bg.png')" }}
     >
       {/* Theme-tinted overlay — color from theme, image still visible */}
@@ -24,89 +24,105 @@ export function HeroSection() {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1280px] px-6 lg:px-8 py-20 lg:py-0 w-full z-10">
-        {/* Mobile stamp — top center */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
-          animate={{ opacity: 1, scale: 1, rotate: -6 }}
-          transition={{ duration: 0.7, delay: 0.2, type: "spring", stiffness: 150 }}
-          className="flex justify-end mb-8 lg:hidden"
-        >
-          <Image
-            src="/images/rank/rank-stamp_yellow.png"
-            alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
-            width={160}
-            height={160}
-            className="w-32 sm:w-40 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-            priority
-          />
-        </motion.div>
+      <div className="relative mx-auto max-w-[1280px] px-6 lg:px-8 pt-36 pb-12 lg:py-0 w-full z-10">
+        {/* Mobile stamp — hidden here, moved to absolute position below */}
 
-        <div className="flex items-center justify-between gap-8">
-          <div className="max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-block bg-white/15 border border-white/25 text-white px-5 py-1.5 rounded-full text-body-sm font-semibold mb-6 backdrop-blur-md"
-            >
-              Cairo University
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-heading font-bold text-white text-h1 sm:text-display lg:text-display-xl tracking-tight leading-tight"
-            >
-              Welcome to the Faculty of{" "}
-              <span className="hero-accent-text font-serif italic font-normal">Engineering</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 text-h4 lg:text-h3 text-white/80 leading-relaxed font-sans font-light"
-            >
-              Empowering the future generation of engineers with innovation, knowledge, and excellence since 1816. Sixteen specialized departments shaping tomorrow.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-10 flex flex-col sm:flex-row gap-4"
-            >
-              <Button href="/departments" size="lg" className="hero-cta-primary bg-gold-400 hover:bg-white hover:text-navy-700!">
-                Explore Programs
-              </Button>
-              <Button
-                href="/study"
-                variant="outline"
-                size="lg"
-                className="border-white/30 text-white hover:bg-white hover:text-navy-700"
-              >
-                Study at CUFE
-              </Button>
-            </motion.div>
-          </div>
-
-          {/* Desktop stamp — right side */}
+        <div className="max-w-3xl">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
-            animate={{ opacity: 1, scale: 1, rotate: -6 }}
-            transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
-            className="hidden lg:block shrink-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-block bg-white/15 border border-white/25 text-white px-5 py-1.5 rounded-full text-body-sm font-semibold mb-6 backdrop-blur-md"
           >
-            <Image
-              src="/images/rank/rank-stamp_yellow.png"
-              alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
-              width={240}
-              height={240}
-              className="w-50 xl:w-60 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]"
-              priority
-            />
+            Cairo University
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-heading font-bold text-white text-h1 sm:text-display lg:text-display-xl tracking-tight leading-tight"
+          >
+            Welcome to the Faculty of{" "}
+            <span className="hero-accent-text font-serif italic font-normal">Engineering</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-6 text-h4 lg:text-h3 text-white/80 leading-relaxed font-sans font-light"
+          >
+            Empowering the future generation of engineers with innovation, knowledge, and excellence since 1816. Sixteen specialized departments shaping tomorrow.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-10 flex flex-col sm:flex-row gap-4"
+          >
+            <Button href="/departments" size="lg" className="hero-cta-primary bg-gold-400 hover:bg-white hover:text-navy-700!">
+              Explore Programs
+            </Button>
+            <Button
+              href="/study"
+              variant="outline"
+              size="lg"
+              className="border-white/30 text-white hover:bg-white hover:text-navy-700"
+            >
+              Study at CUFE
+            </Button>
           </motion.div>
         </div>
       </div>
+
+      {/* Mobile stamp — top right */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 0.2, type: "spring", stiffness: 150 }}
+        className="lg:hidden absolute right-4 top-4 z-10"
+      >
+        <Image
+          src="/images/rank/rank-stamp_yellow.png"
+          alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
+          width={160}
+          height={160}
+          className="w-32 sm:w-36 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+          priority
+        />
+      </motion.div>
+
+      {/* Tablet stamp — bottom right */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
+        className="hidden lg:block xl:hidden absolute right-12 top-1/2 -translate-y-1/2 z-10"
+      >
+        <Image
+          src="/images/rank/rank-stamp_yellow.png"
+          alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
+          width={176}
+          height={176}
+          className="w-48 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]"
+        />
+      </motion.div>
+
+      {/* Desktop stamp — vertically centered right */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
+        className="hidden xl:block absolute right-48 top-1/2 -translate-y-1/2 z-10"
+      >
+        <Image
+          src="/images/rank/rank-stamp_yellow.png"
+          alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
+          width={240}
+          height={240}
+          className="w-52 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]"
+          priority
+        />
+      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
