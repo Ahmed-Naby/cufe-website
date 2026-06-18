@@ -25,6 +25,23 @@ export function HeroSection() {
       />
 
       <div className="relative mx-auto max-w-[1280px] px-6 lg:px-8 py-20 lg:py-0 w-full z-10">
+        {/* Mobile stamp — top center */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
+          animate={{ opacity: 1, scale: 1, rotate: -6 }}
+          transition={{ duration: 0.7, delay: 0.2, type: "spring", stiffness: 150 }}
+          className="flex justify-end mb-8 lg:hidden"
+        >
+          <Image
+            src="/images/rank/rank-stamp_yellow.png"
+            alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
+            width={160}
+            height={160}
+            className="w-32 sm:w-40 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+            priority
+          />
+        </motion.div>
+
         <div className="flex items-center justify-between gap-8">
           <div className="max-w-3xl">
             <motion.div
@@ -72,7 +89,7 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* #1 in Africa stamp */}
+          {/* Desktop stamp — right side */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
             animate={{ opacity: 1, scale: 1, rotate: -6 }}
