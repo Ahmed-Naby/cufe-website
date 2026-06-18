@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 
 export function HeroSection() {
@@ -24,49 +25,68 @@ export function HeroSection() {
       />
 
       <div className="relative mx-auto max-w-[1280px] px-6 lg:px-8 py-20 lg:py-0 w-full z-10">
-        <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-block bg-white/15 border border-white/25 text-white px-5 py-1.5 rounded-full text-body-sm font-semibold mb-6 backdrop-blur-md"
-          >
-            Cairo University
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading font-bold text-white text-h1 sm:text-display lg:text-display-xl tracking-tight leading-tight"
-          >
-            Welcome to the Faculty of{" "}
-            <span className="hero-accent-text font-serif italic font-normal">Engineering</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-h4 lg:text-h3 text-white/80 leading-relaxed font-sans font-light"
-          >
-            Empowering the future generation of engineers with innovation, knowledge, and excellence since 1816. Sixteen specialized departments shaping tomorrow.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4"
-          >
-            <Button href="/departments" size="lg" className="bg-gold-400 text-white hover:bg-white hover:text-navy-700">
-              Explore Programs
-            </Button>
-            <Button
-              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white/30 text-white hover:bg-white hover:text-navy-700"
+        <div className="flex items-center justify-between gap-8">
+          <div className="max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-block bg-white/15 border border-white/25 text-white px-5 py-1.5 rounded-full text-body-sm font-semibold mb-6 backdrop-blur-md"
             >
-              Get in Touch
-            </Button>
+              Cairo University
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="font-heading font-bold text-white text-h1 sm:text-display lg:text-display-xl tracking-tight leading-tight"
+            >
+              Welcome to the Faculty of{" "}
+              <span className="hero-accent-text font-serif italic font-normal">Engineering</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mt-6 text-h4 lg:text-h3 text-white/80 leading-relaxed font-sans font-light"
+            >
+              Empowering the future generation of engineers with innovation, knowledge, and excellence since 1816. Sixteen specialized departments shaping tomorrow.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-10 flex flex-col sm:flex-row gap-4"
+            >
+              <Button href="/departments" size="lg" className="bg-gold-400 text-white hover:bg-white hover:text-navy-700">
+                Explore Programs
+              </Button>
+              <Button
+                href="/contact"
+                variant="outline"
+                size="lg"
+                className="border-white/30 text-white hover:bg-white hover:text-navy-700"
+              >
+                Get in Touch
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* #1 in Africa stamp */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
+            animate={{ opacity: 1, scale: 1, rotate: -6 }}
+            transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
+            className="hidden lg:block shrink-0"
+          >
+            <Image
+              src="/images/rank/rank-stamp_yellow.png"
+              alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
+              width={240}
+              height={240}
+              className="w-50 xl:w-60 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]"
+              priority
+            />
           </motion.div>
         </div>
       </div>
