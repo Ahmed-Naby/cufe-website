@@ -176,6 +176,7 @@ export default function StudyPage() {
                 <Button
                   href={program.href}
                   external={program.external}
+                  variant="secondary"
                   className="w-full"
                   rightIcon={<ArrowRight className="h-4 w-4" />}
                 >
@@ -225,7 +226,7 @@ export default function StudyPage() {
             Take the next step toward your engineering future at Africa&apos;s top-ranked faculty.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/departments" size="lg" className="bg-gold-400 text-white hover:bg-white hover:text-navy-700">
+            <Button href="/departments" size="lg" className="hero-cta-primary bg-gold-400 hover:bg-white hover:text-navy-700!">
               Explore Departments
             </Button>
             <Button
