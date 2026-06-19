@@ -79,7 +79,7 @@ export function HeroSection() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.2, type: "spring", stiffness: 150 }}
-        className="lg:hidden absolute right-4 top-4 z-10"
+        className="lg:hidden absolute right-4 top-4 z-20"
       >
         <Image
           src="/images/rank/rank-stamp_yellow.png"
@@ -96,7 +96,7 @@ export function HeroSection() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
-        className="hidden lg:block xl:hidden absolute right-12 top-1/2 -translate-y-1/2 z-10"
+        className="hidden lg:block xl:hidden absolute right-12 top-1/2 -translate-y-1/2 z-20"
       >
         <Image
           src="/images/rank/rank-stamp_yellow.png"
@@ -112,7 +112,7 @@ export function HeroSection() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
-        className="hidden xl:block absolute right-48 top-1/2 -translate-y-1/2 z-10"
+        className="hidden xl:block absolute right-48 top-1/2 -translate-y-1/2 z-20"
       >
         <Image
           src="/images/rank/rank-stamp_yellow.png"
