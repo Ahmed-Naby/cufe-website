@@ -72,7 +72,7 @@ export function Header() {
               className="h-10 w-10 rounded-full object-contain"
               priority
             />
-            <div className="hidden sm:block">
+            <div>
               <div className="font-heading font-bold text-navy-700 text-body leading-tight">
                 Faculty of Engineering
               </div>
