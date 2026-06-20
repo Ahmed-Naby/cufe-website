@@ -193,6 +193,25 @@ body {
 [data-theme="classic"] .hero-cta-primary,
 [data-theme="classic"] .nav-cta-primary { color: #0D2240; }
 
+/* ── Gold-on-dark fix for red themes ── */
+[data-theme="stanford"] .bg-navy-700 [class*="text-gold-"],
+[data-theme="stanford"] .bg-navy-600 [class*="text-gold-"] {
+  color: #FEDD5C !important;
+}
+[data-theme="mit"] .bg-navy-700 [class*="text-gold-"],
+[data-theme="mit"] .bg-navy-600 [class*="text-gold-"] {
+  color: #FFEB00 !important;
+}
+/* ── Dark-text-on-dark-bg fix for red themes ── */
+[data-theme="stanford"] .bg-gold-500[class*="text-white"],
+[data-theme="mit"] .bg-gold-500[class*="text-white"] {
+  color: white !important;
+}
+[data-theme="stanford"] .bg-navy-700 [class*="text-navy-"],
+[data-theme="mit"] .bg-navy-700 [class*="text-navy-"] {
+  color: white !important;
+}
+
 /* ── Hero Overlay — per-theme tint ── */
 .hero-overlay {
   background: linear-gradient(135deg, rgba(33, 37, 41, 0.9), rgba(108, 117, 125, 0.8));

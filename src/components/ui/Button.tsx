@@ -28,7 +28,7 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-gold-500 text-white hover:bg-gold-600 active:bg-gold-700 shadow-sm",
+    "bg-gold-500 text-white! hover:bg-gold-600 active:bg-gold-700 shadow-sm",
   secondary:
     "bg-navy-700 text-white! hover:bg-navy-600 active:bg-navy-800 shadow-sm",
   outline:
