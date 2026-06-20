@@ -41,8 +41,8 @@ export function Footer() {
           {/* Col 1 — Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-10 w-10 rounded-full bg-gold-500 flex items-center justify-center shrink-0">
-                <span className="text-white font-heading font-bold text-body-sm">CU</span>
+              <div className="h-10 w-10 rounded-full bg-white/15 border border-white/20 flex items-center justify-center shrink-0">
+                <span className="text-white font-heading font-bold text-caption">CUFE</span>
               </div>
               <div>
                 <div className="font-heading font-bold text-body leading-tight">
