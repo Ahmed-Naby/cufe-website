@@ -204,8 +204,11 @@ body {
 }
 /* ── Dark-text-on-dark-bg fix for red themes ── */
 [data-theme="stanford"] .bg-gold-500,
-[data-theme="mit"] .bg-gold-500 {
-  color: white !important;
+[data-theme="stanford"] .bg-gold-500 *,
+[data-theme="mit"] .bg-gold-500,
+[data-theme="mit"] .bg-gold-500 * {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 [data-theme="stanford"] .bg-navy-700 [class*="text-navy-"],
 [data-theme="mit"] .bg-navy-700 [class*="text-navy-"] {
