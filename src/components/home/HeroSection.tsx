@@ -86,7 +86,7 @@ export function HeroSection() {
           alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
           width={160}
           height={160}
-          className="w-32 sm:w-36 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] rotate-10"
+          className="w-36 sm:w-40 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] rotate-10"
           priority
         />
       </motion.div>
@@ -103,7 +103,7 @@ export function HeroSection() {
           alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
           width={176}
           height={176}
-          className="w-48 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
+          className="w-52 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
         />
       </motion.div>
 
@@ -119,7 +119,7 @@ export function HeroSection() {
           alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
           width={240}
           height={240}
-          className="w-52 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
+          className="w-56 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
           priority
         />
       </motion.div>
