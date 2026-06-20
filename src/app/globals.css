@@ -203,8 +203,8 @@ body {
   color: #FFEB00 !important;
 }
 /* ── Dark-text-on-dark-bg fix for red themes ── */
-[data-theme="stanford"] .bg-gold-500[class*="text-white"],
-[data-theme="mit"] .bg-gold-500[class*="text-white"] {
+[data-theme="stanford"] .bg-gold-500,
+[data-theme="mit"] .bg-gold-500 {
   color: white !important;
 }
 [data-theme="stanford"] .bg-navy-700 [class*="text-navy-"],
