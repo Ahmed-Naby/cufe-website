@@ -41,7 +41,7 @@ export function Header() {
         <div className="bg-navy-700 text-white">
           <div className="mx-auto max-w-[1280px] px-6 lg:px-8 flex items-center justify-between h-8 text-caption">
             <span className="hidden sm:inline text-white/70">
-              Cairo University — Faculty of Engineering
+              Cairo University — Faculty of Engineering (CUFE)
             </span>
             <div className="flex items-center gap-4 ml-auto">
               {utilityNav.map((item) => (
