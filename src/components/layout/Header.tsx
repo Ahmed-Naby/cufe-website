@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { mainNav, utilityNav } from "@/data/navigation";
@@ -63,9 +64,14 @@ export function Header() {
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8 flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0 mr-8">
-            <div className="h-10 w-10 rounded-full bg-navy-700 flex items-center justify-center">
-              <span className="text-white font-heading font-bold text-body-sm">CU</span>
-            </div>
+            <Image
+              src="/images/logo/logo.png"
+              alt="Faculty of Engineering — Cairo University"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full object-contain"
+              priority
+            />
             <div className="hidden sm:block">
               <div className="font-heading font-bold text-navy-700 text-body leading-tight">
                 Faculty of Engineering
