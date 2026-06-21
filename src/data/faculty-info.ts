@@ -12,7 +12,7 @@ The faculty expanded from four initial disciplines — Civil, Architectural, Mec
 Nearly a third of recent curricula became elective, and approximately 20 percent of the total credit hours now cover humanities, economics, legislation, and environmental management. In May 2006, the faculty received the Excellence in Science and Technology prize from the Islamic Development Bank.
 
 A new branch opened in Sheikh Zayed City in 2007, featuring an area exceeding 90,000 square meters. We continue to evolve — embracing modern pedagogical approaches through our credit hour programs, expanding our research output through 13 specialized centers, and strengthening our ties with industry.`,
-  image: "/images/about/dean.png",
+  image: "/images/dean/dean3.jpg",
 };
 
 export const visionMission = {
