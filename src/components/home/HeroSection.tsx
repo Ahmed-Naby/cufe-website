@@ -29,7 +29,28 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
+            className="mb-6 sm:mb-8 -mt-24 sm:-mt-8 lg:-mt-12"
+          >
+            <div className="inline-flex items-start gap-3 sm:gap-4 bg-white/[0.07] backdrop-blur-xl border border-white/[0.15] rounded-2xl px-5 py-4 sm:px-6 sm:py-5 shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
+              <span className="text-2xl sm:text-3xl mt-0.5">🏆</span>
+              <div>
+                <p className="text-white font-bold text-lg sm:text-xl tracking-tight leading-none">
+                  #141 <span className="text-white/70 font-normal text-sm sm:text-base">Worldwide</span>
+                </p>
+                <p className="text-white/50 text-[11px] sm:text-xs mt-1.5 tracking-wide uppercase">
+                  Engineering & Technology · QS 2026
+                </p>
+                <p className="text-gold-400 text-xs sm:text-sm font-semibold mt-1.5">
+                  No. 1 in Egypt & Africa
+                </p>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="inline-block bg-white/15 border border-white/25 text-white px-4 sm:px-5 py-1.5 rounded-full text-body-sm font-semibold mb-4 sm:mb-6 backdrop-blur-md"
           >
             Cairo University
@@ -102,7 +123,7 @@ export function HeroSection() {
           alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
           width={160}
           height={160}
-          className="w-24 sm:w-36 md:w-40 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] rotate-10"
+          className="w-20 sm:w-32 md:w-36 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] rotate-10"
           priority
         />
       </motion.div>
@@ -119,7 +140,7 @@ export function HeroSection() {
           alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
           width={176}
           height={176}
-          className="w-48 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
+          className="w-44 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
         />
       </motion.div>
 
@@ -135,7 +156,7 @@ export function HeroSection() {
           alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
           width={240}
           height={240}
-          className="w-56 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
+          className="w-50 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
           priority
         />
       </motion.div>
