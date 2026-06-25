@@ -33,10 +33,10 @@ export function HeroSection() {
             className="mb-6 sm:mb-8 -mt-24 sm:-mt-8 lg:-mt-12 -ml-1 sm:-ml-2"
           >
             <div
-              className="inline-flex items-start gap-3 sm:gap-4 rounded-[20px] px-5 py-4 sm:px-6 sm:py-5"
+              className="inline-flex items-center gap-3 sm:gap-4 rounded-[20px] px-5 py-4 sm:px-6 sm:py-5"
               style={{ background: "rgba(255,255,255,.08)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,.15)", boxShadow: "0 10px 25px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.08)" }}
             >
-              <Trophy className="w-6 h-6 sm:w-7 sm:h-7 text-gold-400 mt-1 shrink-0" />
+              <Trophy className="w-6 h-6 sm:w-7 sm:h-7 text-gold-400 shrink-0" />
               <div>
                 <p className="text-white font-bold text-2xl sm:text-3xl tracking-tight leading-none">
                   #141 <span className="text-white/70 font-normal text-sm sm:text-base align-baseline">Worldwide</span>
@@ -45,7 +45,7 @@ export function HeroSection() {
                   Engineering & Technology · QS 2026
                 </p>
                 <p className="mt-1.5">
-                  <span className="text-[#FFC72C] font-bold text-base sm:text-lg">No. 1</span> <span className="text-white font-medium text-xs sm:text-sm">in Egypt & Africa</span>
+                  <span className="font-bold text-base sm:text-lg" style={{ color: "#FFC72C" }}>No. 1</span><span className="text-white font-medium text-xs sm:text-sm ml-2">in Egypt & Africa</span>
                 </p>
               </div>
             </div>
