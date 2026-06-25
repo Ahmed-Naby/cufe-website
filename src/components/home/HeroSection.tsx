@@ -47,7 +47,8 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 sm:mt-6 text-base sm:text-h4 lg:text-h3 text-white/80 leading-relaxed font-sans font-light"
+            className="mt-4 sm:mt-6 text-base sm:text-h4 lg:text-h3 text-white/80 font-sans font-light"
+            style={{ lineHeight: 1.55 }}
           >
             Empowering the future generation of engineers with innovation, knowledge, and excellence since 1816. Sixteen specialized departments shaping tomorrow.
           </motion.p>
@@ -55,9 +56,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-6 sm:mt-10 pb-32 lg:pb-0 flex flex-col sm:flex-row gap-3 sm:gap-4"
+            className="mt-8 sm:mt-12 pb-32 lg:pb-0 flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
-            <Button href="/departments" size="lg" className="hero-cta-primary bg-gold-400 hover:bg-white hover:text-navy-700!">
+            <Button href="/departments" size="lg" className="hero-cta-primary bg-gold-400 hover:bg-white hover:text-navy-700! h-14.5 font-bold">
               Explore Programs
             </Button>
             <Button
@@ -94,7 +95,7 @@ export function HeroSection() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
-        className="hidden lg:block xl:hidden absolute right-16 top-16 z-20"
+        className="hidden lg:block xl:hidden absolute right-12 top-10 z-20"
       >
         <Image
           src="/images/rank/rank-stamp_yellow_solid.png"
@@ -110,7 +111,7 @@ export function HeroSection() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
-        className="hidden xl:block absolute right-32 top-16 z-20"
+        className="hidden xl:block absolute right-28 top-10 z-20"
       >
         <Image
           src="/images/rank/rank-stamp_yellow_solid.png"
@@ -122,23 +123,35 @@ export function HeroSection() {
         />
       </motion.div>
 
+      {/* Radial glow behind students */}
+      <div
+        className="hidden lg:block absolute -bottom-32 right-[6%] xl:right-[6%] 2xl:right-[8%] z-9 pointer-events-none w-[52vw] lg:max-w-160 xl:max-w-184 2xl:max-w-208 aspect-square"
+        style={{ background: "radial-gradient(circle at 73% 55%, rgba(255,255,255,.18), transparent 60%)" }}
+      />
+
       {/* Students image — desktop (lg+) */}
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="hidden lg:block absolute -bottom-32 right-[10%] xl:right-[10%] 2xl:right-[12%] z-10 pointer-events-none"
-        style={{ maskImage: "linear-gradient(to bottom, white 40%, transparent 85%)", WebkitMaskImage: "linear-gradient(to bottom, white 40%, transparent 85%)" }}
+        className="hidden lg:block absolute -bottom-40 right-[6%] xl:right-[6%] 2xl:right-[8%] z-10 pointer-events-none"
+        style={{ maskImage: "linear-gradient(to bottom, white 45%, transparent 90%)", WebkitMaskImage: "linear-gradient(to bottom, white 45%, transparent 90%)" }}
       >
         <Image
           src="/images/students/students11.png"
           alt="Students studying together on campus"
           width={900}
           height={700}
-          className="w-[45vw] lg:max-w-140 xl:max-w-160 2xl:max-w-180 h-auto object-contain object-bottom-right"
+          className="w-[52vw] lg:max-w-160 xl:max-w-184 2xl:max-w-208 h-auto object-contain object-bottom-right brightness-[1.07] drop-shadow-[0_30px_45px_rgba(0,0,0,0.28)]"
           priority
         />
       </motion.div>
+
+      {/* Radial glow behind students — mobile/tablet */}
+      <div
+        className="lg:hidden absolute -bottom-8 min-[800px]:bottom-0 left-1/2 -translate-x-1/2 min-[480px]:translate-x-0 min-[480px]:left-auto min-[480px]:right-0 z-9 pointer-events-none w-[95vw] min-[480px]:w-[60vw] sm:w-[55vw] md:w-[50vw] aspect-square"
+        style={{ background: "radial-gradient(circle at 73% 55%, rgba(255,255,255,.18), transparent 60%)" }}
+      />
 
       {/* Students image — mobile/tablet */}
       <motion.div
@@ -153,7 +166,7 @@ export function HeroSection() {
           alt="Students studying together on campus"
           width={700}
           height={500}
-          className="w-[95vw] min-[480px]:w-[60vw] sm:w-[55vw] md:w-[50vw] h-auto object-contain object-bottom mx-auto"
+          className="w-[95vw] min-[480px]:w-[60vw] sm:w-[55vw] md:w-[50vw] h-auto object-contain object-bottom mx-auto brightness-[1.07] drop-shadow-[0_30px_45px_rgba(0,0,0,0.28)]"
         />
       </motion.div>
 
