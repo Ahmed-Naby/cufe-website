@@ -85,7 +85,7 @@ export function HeroSection() {
             style={{ maskImage: "linear-gradient(to bottom, white 35%, transparent 80%)", WebkitMaskImage: "linear-gradient(to bottom, white 35%, transparent 80%)" }}
           >
             <Image
-              src="/images/students/students11.png"
+              src="/images/students/students12.png"
               alt="Students studying together on campus"
               width={700}
               height={500}
@@ -173,7 +173,7 @@ export function HeroSection() {
         style={{ maskImage: "linear-gradient(to bottom, white 35%, transparent 80%)", WebkitMaskImage: "linear-gradient(to bottom, white 35%, transparent 80%)" }}
       >
         <Image
-          src="/images/students/students11.png"
+          src="/images/students/students12.png"
           alt="Students studying together on campus"
           width={900}
           height={700}
@@ -191,7 +191,7 @@ export function HeroSection() {
         style={{ maskImage: "linear-gradient(to bottom, white 35%, transparent 80%)", WebkitMaskImage: "linear-gradient(to bottom, white 35%, transparent 80%)" }}
       >
         <Image
-          src="/images/students/students11.png"
+          src="/images/students/students12.png"
           alt="Students studying together on campus"
           width={700}
           height={500}
