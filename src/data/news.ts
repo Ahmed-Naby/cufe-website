@@ -19,7 +19,7 @@ export const newsArticles: NewsArticle[] = [
     content: "",
     category: "Research",
     date: "2026-03-01",
-    image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     author: "Research Office",
     tags: ["AI", "research", "computer engineering"],
   },
