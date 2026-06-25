@@ -106,7 +106,7 @@ export function HeroSection() {
               href="/study"
               variant="outline"
               size="lg"
-              className="border-white/30 text-white hover:bg-white hover:text-[#212529]"
+              className="border-white/30 text-white hover:bg-white hover:text-[#212529] h-14.5"
             >
               Study at CUFE
             </Button>
