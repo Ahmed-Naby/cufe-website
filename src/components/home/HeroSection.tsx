@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/Button";
 
 export function HeroSection() {
   return (
-    <section 
-      className="relative min-h-[90vh] flex items-start lg:items-center bg-navy-700 overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
+    <section
+      className="relative min-h-[70vh] min-[500px]:min-h-[85vh] sm:min-h-[90vh] flex items-start lg:items-center bg-navy-700 overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
       style={{ backgroundImage: "url('/images/hero/hero-bg.png')" }}
     >
       {/* Theme-tinted overlay — color from theme, image still visible */}
@@ -24,15 +24,13 @@ export function HeroSection() {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1280px] px-6 lg:px-8 pt-36 pb-12 lg:py-0 w-full z-10">
-        {/* Mobile stamp — hidden here, moved to absolute position below */}
-
-        <div className="max-w-3xl">
+      <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 pb-4 sm:pb-56 md:pb-64 lg:pb-12 lg:py-0 w-full z-15">
+        <div className="max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-block bg-white/15 border border-white/25 text-white px-5 py-1.5 rounded-full text-body-sm font-semibold mb-6 backdrop-blur-md"
+            className="inline-block bg-white/15 border border-white/25 text-white px-4 sm:px-5 py-1.5 rounded-full text-body-sm font-semibold mb-4 sm:mb-6 backdrop-blur-md"
           >
             Cairo University
           </motion.div>
@@ -40,7 +38,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading font-bold text-white text-h1 sm:text-display lg:text-display-xl tracking-tight leading-tight"
+            className="font-heading font-bold text-white text-3xl sm:text-h1 md:text-display lg:text-display-xl tracking-tight leading-tight"
           >
             Welcome to the Faculty of{" "}
             <span className="hero-accent-text font-serif italic font-normal">Engineering</span>
@@ -49,7 +47,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-h4 lg:text-h3 text-white/80 leading-relaxed font-sans font-light"
+            className="mt-4 sm:mt-6 text-base sm:text-h4 lg:text-h3 text-white/80 leading-relaxed font-sans font-light"
           >
             Empowering the future generation of engineers with innovation, knowledge, and excellence since 1816. Sixteen specialized departments shaping tomorrow.
           </motion.p>
@@ -57,7 +55,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4"
+            className="mt-6 sm:mt-10 pb-32 lg:pb-0 flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <Button href="/departments" size="lg" className="hero-cta-primary bg-gold-400 hover:bg-white hover:text-navy-700!">
               Explore Programs
@@ -79,40 +77,40 @@ export function HeroSection() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.2, type: "spring", stiffness: 150 }}
-        className="lg:hidden absolute right-4 top-4 z-20"
+        className="lg:hidden absolute right-3 sm:right-4 top-3 sm:top-4 z-20"
       >
         <Image
           src="/images/rank/rank-stamp_yellow_solid.png"
           alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
           width={160}
           height={160}
-          className="w-36 sm:w-40 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] rotate-10"
+          className="w-24 sm:w-36 md:w-40 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] rotate-10"
           priority
         />
       </motion.div>
 
-      {/* Tablet stamp — bottom right */}
+      {/* Tablet stamp — top right, above students */}
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
-        className="hidden lg:block xl:hidden absolute right-12 top-1/2 -translate-y-1/2 z-20"
+        className="hidden lg:block xl:hidden absolute right-16 top-16 z-20"
       >
         <Image
           src="/images/rank/rank-stamp_yellow_solid.png"
           alt="Ranked No. 1 in Africa — Faculty of Engineering, Cairo University"
           width={176}
           height={176}
-          className="w-52 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
+          className="w-48 h-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] rotate-10"
         />
       </motion.div>
 
-      {/* Desktop stamp — vertically centered right */}
+      {/* Desktop stamp — top right, above students */}
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.5, type: "spring", stiffness: 150 }}
-        className="hidden xl:block absolute right-48 top-1/2 -translate-y-1/2 z-20"
+        className="hidden xl:block absolute right-32 top-16 z-20"
       >
         <Image
           src="/images/rank/rank-stamp_yellow_solid.png"
@@ -124,14 +122,49 @@ export function HeroSection() {
         />
       </motion.div>
 
+      {/* Students image — desktop (lg+) */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="hidden lg:block absolute -bottom-32 right-[10%] xl:right-[10%] 2xl:right-[12%] z-10 pointer-events-none"
+        style={{ maskImage: "linear-gradient(to bottom, white 40%, transparent 85%)", WebkitMaskImage: "linear-gradient(to bottom, white 40%, transparent 85%)" }}
+      >
+        <Image
+          src="/images/students/students11.png"
+          alt="Students studying together on campus"
+          width={900}
+          height={700}
+          className="w-[45vw] lg:max-w-140 xl:max-w-160 2xl:max-w-180 h-auto object-contain object-bottom-right"
+          priority
+        />
+      </motion.div>
+
+      {/* Students image — mobile/tablet */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.4 }}
+        className="lg:hidden absolute -bottom-8 min-[800px]:bottom-0 left-1/2 -translate-x-1/2 min-[480px]:translate-x-0 min-[480px]:left-auto min-[480px]:right-0 z-10 pointer-events-none"
+        style={{ maskImage: "linear-gradient(to bottom, white 50%, transparent 90%)", WebkitMaskImage: "linear-gradient(to bottom, white 50%, transparent 90%)" }}
+      >
+        <Image
+          src="/images/students/students11.png"
+          alt="Students studying together on campus"
+          width={700}
+          height={500}
+          className="w-[95vw] min-[480px]:w-[60vw] sm:w-[55vw] md:w-[50vw] h-auto object-contain object-bottom mx-auto"
+        />
+      </motion.div>
+
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-20"
       >
-        <ChevronDown className="h-6 w-6 text-white/40 animate-bounce" />
+        <ChevronDown className="h-5 w-5 sm:h-6 sm:w-6 text-white/40 animate-bounce" />
       </motion.div>
     </section>
   );
