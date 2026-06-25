@@ -52,11 +52,28 @@ export function HeroSection() {
           >
             Empowering the future generation of engineers with innovation, knowledge, and excellence since 1816. Sixteen specialized departments shaping tomorrow.
           </motion.p>
+          {/* Students image — inline on mobile only */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8 sm:mt-12 pb-32 lg:pb-0 flex flex-col sm:flex-row gap-3 sm:gap-4"
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="sm:hidden -mt-2 flex justify-center pointer-events-none"
+            style={{ maskImage: "linear-gradient(to bottom, white 50%, transparent 90%)", WebkitMaskImage: "linear-gradient(to bottom, white 50%, transparent 90%)" }}
+          >
+            <Image
+              src="/images/students/students11.png"
+              alt="Students studying together on campus"
+              width={700}
+              height={500}
+              className="w-[85vw] h-auto object-contain"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="-mt-16 sm:mt-12 pb-4 sm:pb-32 lg:pb-0 flex flex-col sm:flex-row gap-3 sm:gap-4 relative z-10"
           >
             <Button href="/departments" size="lg" className="hero-cta-primary bg-gold-400 hover:bg-white hover:text-navy-700! h-14.5 font-bold">
               Explore Programs
@@ -146,7 +163,7 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4 }}
-        className="lg:hidden absolute -bottom-8 min-[800px]:bottom-0 left-1/2 -translate-x-1/2 min-[480px]:translate-x-0 min-[480px]:left-auto min-[480px]:right-0 z-10 pointer-events-none"
+        className="hidden sm:block lg:hidden absolute -bottom-8 min-[800px]:bottom-0 left-1/2 -translate-x-1/2 min-[480px]:translate-x-0 min-[480px]:left-auto min-[480px]:right-0 z-10 pointer-events-none"
         style={{ maskImage: "linear-gradient(to bottom, white 50%, transparent 90%)", WebkitMaskImage: "linear-gradient(to bottom, white 50%, transparent 90%)" }}
       >
         <Image
