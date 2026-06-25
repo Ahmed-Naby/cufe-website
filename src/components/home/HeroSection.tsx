@@ -58,7 +58,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="sm:hidden -mt-2 flex justify-center pointer-events-none"
-            style={{ maskImage: "linear-gradient(to bottom, white 50%, transparent 90%)", WebkitMaskImage: "linear-gradient(to bottom, white 50%, transparent 90%)" }}
+            style={{ maskImage: "linear-gradient(to bottom, white 35%, transparent 80%)", WebkitMaskImage: "linear-gradient(to bottom, white 35%, transparent 80%)" }}
           >
             <Image
               src="/images/students/students11.png"
@@ -146,7 +146,7 @@ export function HeroSection() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
         className="hidden lg:block absolute -bottom-40 right-[6%] xl:right-[6%] 2xl:right-[8%] z-10 pointer-events-none"
-        style={{ maskImage: "linear-gradient(to bottom, white 50%, transparent 90%)", WebkitMaskImage: "linear-gradient(to bottom, white 50%, transparent 90%)" }}
+        style={{ maskImage: "linear-gradient(to bottom, white 35%, transparent 80%)", WebkitMaskImage: "linear-gradient(to bottom, white 35%, transparent 80%)" }}
       >
         <Image
           src="/images/students/students11.png"
@@ -164,7 +164,7 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4 }}
         className="hidden sm:block lg:hidden absolute -bottom-8 min-[800px]:bottom-0 left-1/2 -translate-x-1/2 min-[480px]:translate-x-0 min-[480px]:left-auto min-[480px]:right-0 z-10 pointer-events-none"
-        style={{ maskImage: "linear-gradient(to bottom, white 50%, transparent 90%)", WebkitMaskImage: "linear-gradient(to bottom, white 50%, transparent 90%)" }}
+        style={{ maskImage: "linear-gradient(to bottom, white 35%, transparent 80%)", WebkitMaskImage: "linear-gradient(to bottom, white 35%, transparent 80%)" }}
       >
         <Image
           src="/images/students/students11.png"
