@@ -71,10 +71,8 @@ export const mainNav: NavItem[] = [
 ];
 
 export const utilityNav: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "FAQ", href: "/contact#faq" },
-  { label: "E-mail", href: "http://mail.eng.cu.edu.eg", external: true },
-  { label: "Find Us", href: "/contact#map" },
-  { label: "Credits", href: "/credits" },
-  { label: "Links", href: "/links" },
+  { label: "عربي", href: "#", external: false },
+  { label: "Webmail", href: "http://mail.eng.cu.edu.eg", external: true },
+  { label: "E-Learning", href: "https://elearn.eng.cu.edu.eg", external: true },
 ];
+

@@ -50,7 +50,10 @@ export function Header() {
                   href={item.href}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noopener noreferrer" : undefined}
-                  className="text-white/70 hover:text-white transition-colors flex items-center gap-1"
+                  className={cn(
+                    "text-white/70 hover:text-white transition-colors flex items-center gap-1",
+                    item.label === "عربي" && "font-semibold text-gold-400 hover:text-gold-300"
+                  )}
                 >
                   {item.label}
                   {item.external && <ExternalLink className="h-3 w-3" />}
