@@ -217,7 +217,7 @@ body {
 
 /* ── Hero Overlay — per-theme tint ── */
 .hero-overlay {
-  background: linear-gradient(135deg, rgba(33, 37, 41, 0.9), rgba(108, 117, 125, 0.8));
+  background: linear-gradient(135deg, rgba(11, 18, 31, 0.7), rgba(11, 18, 31, 0.55));
 }
 .hero-overlay::after {
   content: '';

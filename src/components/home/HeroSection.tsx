@@ -129,7 +129,7 @@ export function HeroSection() {
   return (
     <section
       className="relative min-h-[70vh] min-[500px]:min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center bg-navy-700 overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
-      style={{ backgroundImage: "url('/images/hero/hero-bg.png')", backgroundColor: "#0b121f" }}
+      style={{ backgroundImage: "url('/images/hero/hero-bg8.png')", backgroundColor: "#0b121f" }}
     >
       {/* Theme-tinted overlay — color from theme, image still visible */}
       <div className="absolute inset-0 hero-overlay z-0" />
